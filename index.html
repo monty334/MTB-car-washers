@@ -35,12 +35,13 @@
           <select name="service" required>
             <option value="">Select Service</option>
             <option value="basic-wash">Basic Wash</option>
-            <option value="full-detail">Full (includs inside of doors)</option>
+            <option value="full-detail">Full Detail</option>
             
           </select>
-          <input type="date" name="appointment_date" required>
+          <!-- Date Picker with Weekend-Only Selection -->
+          <input type="date" name="appointment_date" id="appointment_date" required>
           <input type="text" name="address" placeholder="Your Address" required>
-          <button type="submit" class="book-button">Book A Wash</button>
+          <button type="submit" class="book-button">Book Appointment</button>
         </form>
       </div>
     </section>
@@ -49,6 +50,10 @@
       <h1>About Us</h1>
       <p>MTB Car Washers is dedicated to providing top-quality car washing services. We value excellence and customer satisfaction above all.</p>
     </section>
+
+
+      
+  
 
     <section id="latest" class="page">
       <h1>Our Latest Newsletter</h1>
@@ -72,12 +77,12 @@
           <h3>Thank you</h3> for trusting MTB to keep your car looking great. We look forward to seeing you this November!
 
           <h3>Stay clean and safe,</h3>
-The MTB Car Wash Team</em></p>
+The MTB Car Wash Team
+</em></p>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="./script.js"></script>
-</body>
-</html>
+  <p id="confirmationMessage" style="display:none; color: green; margin-top: 15px;">Thank you! Your booking request has been sent.</p>
+  <link rel="script" href="./script.js">
