@@ -3,29 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>MTB Car Washers</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="calculator">
-    <input id="display" type="text" disabled>
-    <button class="btn" onclick="appendNumber('1')">1</button>
-    <button class="btn" onclick="appendNumber('2')">2</button>
-    <button class="btn" onclick="appendNumber('3')">3</button>
-    <button class="btn" onclick="appendNumber('+')">+</button>
-    <button class="btn" onclick="appendNumber('4')">4</button>
-    <button class="btn" onclick="appendNumber('5')">5</button>
-    <button class="btn" onclick="appendNumber('6')">6</button>
-    <button class="btn" onclick="appendNumber('-')">-</button>
-    <button class="btn" onclick="appendNumber('7')">7</button>
-    <button class="btn" onclick="appendNumber('8')">8</button>
-    <button class="btn" onclick="appendNumber('9')">9</button>
-    <button class="btn" onclick="appendNumber('*')">*</button>
-    <button class="btn" onclick="appendNumber('0')">0</button>
-    <button class="btn" onclick="clearDisplay()">C</button>
-    <button class="btn" onclick="calculate()">=</button>
-    <button class="btn" onclick="appendNumber('/')">/</button>
-  </div>
+  <header>
+    <div class="logo">MTB Car Washers</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="javascript:void(0);" onclick="showPage('home')">Home</a></li>
+        <li><a href="javascript:void(0);" onclick="showPage('about')">About</a></li>
+        <li><a href="javascript:void(0);" onclick="showPage('latest')">Latest</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="home" class="page active">
+      <h1>Welcome to MTB Car Washers</h1>
+      <p>Your trusted car washing service!</p>
+      <button onclick="showPage('latest')" class="cta-button">Read Our Latest Newsletter</button>
+      
+      <!-- Book Us Now Section -->
+      <div class="book-now">
+        <h2>Book Us Now</h2>
+        <form id="bookingForm" action="https://formspree.io/f/mnnqvdyb" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <select name="service" required>
+            <option value="">Select Service</option>
+            <option value="basic-wash">Basic Wash</option>
+            <option value="full-detail">Full (includs inside of doors)</option>
+            
+          </select>
+          <input type="date" name="appointment_date" required>
+          <input type="text" name="address" placeholder="Your Address" required>
+          <button type="submit" class="book-button">Book A Wash</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="about" class="page">
+      <h1>About Us</h1>
+      <p>MTB Car Washers is dedicated to providing top-quality car washing services. We value excellence and customer satisfaction above all.</p>
+    </section>
+
+    <section id="latest" class="page">
+      <h1>Our Latest Newsletter</h1>
+      <div class="newsletter">
+        <div class="newsletter-content">
+          <p><em><h1>MTB Car Wash – November Newsletter</h1> 
+
+            <h2>Hello MTB Family!</h2>
+            
+<p>As the weather cools and the fall season gives way to winter, it’s the perfect time to give your car the care it deserves. At MTB, we’re here to help keep your vehicle looking its best, no matter what the season brings.</p>
+
+            <p><h2>November Special Offer:</h2> Pre-Winter Package Get your car ready for winter with our Pre-Winter Car Wash Package available all month long. For just £10, enjoy:
+
+          <h3>Exterior Wash :</h3> Protect your vehicle’s paint from the harsh winter elements.
+<h3>Underbody Wash:</h3> Remove road salt and grime that can cause long-term damage.</p>
+
+           <h3>Why Wash Your Car in November?</h3> As the season changes, keeping your car clean is more important than ever. Regular washes help protect your car from the buildup of road salt, grime, and other winter elements. A clean car is not only safer to drive, but it also helps maintain the longevity of your vehicle.
+
+          <h3>Winter-Ready Services at MTB,</h3> we’re committed to providing the best service and care for your car all year long. Whether you need a quick exterior wash or a full detailing service, we’ve got you covered. Our professional team is here to make sure your vehicle stays in top condition during the colder months.
+
+          <h3>Thank you</h3> for trusting MTB to keep your car looking great. We look forward to seeing you this November!
+
+          <h3>Stay clean and safe,</h3>
+The MTB Car Wash Team</em></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
