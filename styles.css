@@ -202,3 +202,29 @@ p {
 .page.active {
   display: block;
 }
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background: linear-gradient(45deg, #4CAF50, #00BCD4);
+  color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+p1 {
+  font-size: 18px;
+  color: #D36161;
+  max-width: 600px;
+}
+p2 {
+  font-size: 19px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  font-family: 'Bubblegum Sans', sans-serif;
+}
