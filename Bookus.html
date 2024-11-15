@@ -13,7 +13,7 @@
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <nav id="navMenu">
       <ul>
-        <li><a href="./index.html">Home</a></li>
+        <li><a href="./index.html" >Home</a></li>
         <li><a href="./Bookus.html">Book Us</a></li>
         <li><a href="./newsletter.html">Latest</a></li>
       </ul>
@@ -21,21 +21,32 @@
   </header>
   
   <main>
-    <section id="home" class="page active">
-      <h1>Welcome to MTB Car Washers</h1>
-      <p1>We only wash in Taverham and Thorpe Marriot, Norfolk.</p1>
-      <p>Your trusted car washing service!</p>
-      <button onclick="showPage('latest')" class="cta-button">Read Our Latest Newsletter</button>
+    
         
-          
+    
 <!-- Book Us Now Section -->
 <div class="book-now">
-    <a href="./Bookus.html" class="button"></a>
-   
+    <h2>Book Us Now</h2>
+    <form id="bookingForm" action="https://formspree.io/f/mnnqvdyb" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="basic-wash">Basic Wash</option>
+        <option value="full-detail">Full Detail</option>
+        
+      </select>
+      <label for="time">Preferred Time:</label><br>
+            <input type="time" id="time" name="time" required><br><br>
+      <!-- Date Picker with Weekend-Only Selection -->
+      <input type="date" name="appointment_date" id="appointment_date" required>
+      <input type="text" name="address" placeholder="Your Address" required>
+      <button type="submit" class="book-button">Book A Wash</button>
+    </form>
   </div>
 </section>
 
-            
+      
   
 
     <section id="latest" class="page">

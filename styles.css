@@ -56,8 +56,8 @@ nav a:hover {
 }
 
 #navMenu {
-  display: flex;
-  gap: 20px;
+  display: center;
+  gap: 200px;
 }
 
 @media (max-width: 768px) {
@@ -125,7 +125,7 @@ p {
   color: white;
   font-size: 20px;
   padding: 15px 30px;
-  border: ;
+  border: none;
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
@@ -146,58 +146,7 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
 }
-/* Book Us Now section styling (no major updates needed) */
-.book-now input, .book-now select {
-  padding: 120px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  outline: none;
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
-}
 
-.book-now h2 {
-  font-size: 28px;
-  color: #333;
-  margin-bottom: 20px;
-  font-family: 'Bubblegum Sans', sans-serif;
-}
-
-#bookingForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#bookingForm input, #bookingForm select {
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 200px;
-  border: 1px solid #ddd;
-  outline: none;
-  font-family: 'Poppins', sans-serif;
-}
-
-#bookingForm input:focus, #bookingForm select:focus {
-  border-color: #4CAF50;
-}
-
-.book-button {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 18px;
-  padding: 12px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.book-button:hover {
-  background-color: #388E3C;
-}
 .page {
   display: none;
 }
@@ -270,3 +219,58 @@ p2 {
     .carousel-next {
       right: 10px;
     }
+  /* Book Us Now section styling (no major updates needed) */
+  .book-now input, .book-now select {
+    padding: 120px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+  }
+  
+  .book-now h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Bubblegum Sans', sans-serif;
+  }
+  
+  #bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #bookingForm input, #bookingForm select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 200px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  #bookingForm input:focus, #bookingForm select:focus {
+    border-color: #4CAF50;
+  }
+  
+  .book-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .book-button:hover {
+    background-color: #388E3C;
+  }
+  form{
+    width: 15cm;
+  }
