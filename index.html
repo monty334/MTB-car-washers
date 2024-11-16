@@ -23,7 +23,7 @@
   <main>
     <section id="home" class="page active">
       <h1>Welcome to MTB Car Washers</h1>
-      <p1>We only wash in Taverham and Thorpe Marriot, Norfolk. This is because we are 13.</p1>
+      <p1>We only wash in Taverham and Thorpe Marriot, Norfolk.</p1>
       <p>Your trusted car washing service!</p>
       <button onclick="showPage('latest')" class="cta-button">Read Our Latest Newsletter</button>
         
@@ -51,32 +51,38 @@
       <button class="next" onclick="moveSlide(1)">&#10095;</button>
   </div>
 </section>
-
 <style>
-  #carousel {
+ #carousel {
       text-align: center;
       margin: 40px 0;
   }
 
   .carousel-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-  }
+    position: relative;
+    width: 420px; /* Ensure this matches your desired carousel width */
+    margin: auto;
+    overflow: hidden; /* Ensures only one image is visible */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.5);
+}
 
-  .carousel-slide {
-      display: flex;
-      transition: transform 1.5s ease-in-out;
-  }
+.carousel-slide {
+    display: flex;
+    width: calc(400 * 3); /* Total width = width of container * number of images */
+    transition: transform 1.5s ease-in-out; /* Smooth transition for sliding */
+    gap: 40px;
+}
 
-  .carousel-slide img {
-    width: 80%; /* Adjust image size */
-    max-width: 400px; /* Optional: Cap the max size */
-    height: auto; /* Maintain aspect ratio */
-    margin: auto; /* Center the image */
-    display: block; /* Ensures proper alignment */
-  }
+.carousel-slide img {
+    width: 380px; /* Each image takes up the full width of the container */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
 
   .prev, .next {
       position: absolute;
@@ -105,35 +111,40 @@
   }
 </style>
 <script>
-  let slideIndex = 0;
+  const carouselSlide = document.querySelector('.carousel-slide');
+const images = carouselSlide.querySelectorAll('img');
+const totalImages = images.length;
 
-  function moveSlide(n) {
-      slideIndex += n;
-      showSlides(slideIndex);
-  }
+let currentIndex = 0;
 
-  function showSlides(n) {
-      const slides = document.querySelectorAll('.carousel-slide img');
-      
-      if (n >= slides.length) {
-          slideIndex = 0;
-      }
-      if (n < 0) {
-          slideIndex = slides.length - 1;
-      }
+function showNextSlide() {
+    currentIndex++;
+    if (currentIndex >= totalImages) {
+        currentIndex = 0; // Loop back to the first image
+    }
+    updateCarousel();
+}
 
-      // Hide all images
-      for (let i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
+function showPrevSlide() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = totalImages - 1; // Go to the last image
+    }
+    updateCarousel();
+}
 
-      // Show the current image
-      slides[slideIndex].style.display = "block";
-  }
+function updateCarousel() {
+    const slideWidth = document.querySelector('.carousel-container').clientWidth; // Get container width dynamically
+    carouselSlide.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
 
-  // Initialize carousel
-  showSlides(slideIndex);
+// Event listeners for buttons
+document.querySelector('.prev').addEventListener('click', showPrevSlide);
+document.querySelector('.next').addEventListener('click', showNextSlide);
+
 </script>
+
+
 
   </main>
 <footer>
