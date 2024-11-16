@@ -36,35 +36,105 @@
 </section>
 
             
-  
-
-    <section id="latest" class="page">
-      <h1>Our Latest Newsletter</h1>
-      <div class="newsletter">
-        <div class="newsletter-content">
-          <p><em><h1>MTB Car Wash – November Newsletter</h1> 
-
-            <h2>Hello MTB Family!</h2>
-            
-<p3>As the weather cools the season gives way to winter, it’s the perfect time to give your car the care it deserves. At MTB, we’re here to help keep your vehicle looking its best, no matter what the season brings.</p3>
-
-            <p><h2>November Special Offer:</h2> Pre-Winter Package Get your car ready for winter with our Pre-Winter Car Wash Package available all month long. For just £10, enjoy:
-
-          <h3>Exterior Wash :</h3> Protect your vehicle’s paint from the harsh winter elements.
-<h3>Underbody Wash:</h3> Remove road salt and grime that can cause long-term damage.</p>
-
-           <h3>Why Wash Your Car in November?</h3> As the season changes, keeping your car clean is more important than ever. Regular washes help protect your car from the buildup of road salt, grime, and other winter elements. A clean car is not only safer to drive, but it also helps maintain the longevity of your vehicle.
-
-          <h3>Winter-Ready Services at MTB,</h3> we’re committed to providing the best service and care for your car all year long. Whether you need a quick exterior wash or a full detailing service, we’ve got you covered. Our professional team is here to make sure your vehicle stays in top condition during the colder months.
-
-          <h3>Thank you</h3> for trusting MTB to keep your car looking great. We look forward to seeing you this November!
-
-          <h3>Stay safe,</h3>
-The MTB Car Wash Team
-</em></p>
-        </div>
+<section id="carousel">
+  <h2>Our Latest Work</h2>
+  <div class="carousel-container">
+      <!-- Carousel Images -->
+      <div class="carousel-slide">
+          <img src="./carwash1.jpg" alt="Car Wash Service 1">
+          <img src="./carwash2.jpg" alt="Car Wash Service 2">
+          <img src="./carwash3.jpg" alt="Car Wash Service 3">
       </div>
-    </section>
+
+      <!-- Navigation Arrows -->
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+</section>
+
+<style>
+  #carousel {
+      text-align: center;
+      margin: 40px 0;
+  }
+
+  .carousel-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+  }
+
+  .carousel-slide {
+      display: flex;
+      transition: transform 1.5s ease-in-out;
+  }
+
+  .carousel-slide img {
+    width: 80%; /* Adjust image size */
+    max-width: 400px; /* Optional: Cap the max size */
+    height: auto; /* Maintain aspect ratio */
+    margin: auto; /* Center the image */
+    display: block; /* Ensures proper alignment */
+  }
+
+  .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-0%);
+      font-size: 30px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+  }
+
+  .prev {
+      left: 10px;
+  }
+
+  .next {
+      right: 10px;
+  }
+
+  .prev:hover, .next:hover {
+      background-color: rgba(72, 239, 119, 0.7);
+      transform: scale(1.17);
+  }
+</style>
+<script>
+  let slideIndex = 0;
+
+  function moveSlide(n) {
+      slideIndex += n;
+      showSlides(slideIndex);
+  }
+
+  function showSlides(n) {
+      const slides = document.querySelectorAll('.carousel-slide img');
+      
+      if (n >= slides.length) {
+          slideIndex = 0;
+      }
+      if (n < 0) {
+          slideIndex = slides.length - 1;
+      }
+
+      // Hide all images
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+
+      // Show the current image
+      slides[slideIndex].style.display = "block";
+  }
+
+  // Initialize carousel
+  showSlides(slideIndex);
+</script>
+
   </main>
 <footer>
     <p2>&copy; 2024 MTB Car Washers. All rights reserved.</p2>
