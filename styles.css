@@ -228,6 +228,8 @@ p2 {
     outline: none;
     font-family: 'Poppins', sans-serif;
     width: 100%;
+    display: flex;
+    flex-grow: 1;
   }
   
   .book-now h2 {
@@ -266,11 +268,27 @@ p2 {
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
+    transition: transform 0.3s ease;
   }
   
   .book-button:hover {
-    background-color: #388E3C;
+    background-color: #3777de;
+    transform: scale(1.05);
   }
   form{
-    width: 10cm;
+    width: 15cm;
+  }
+  h2{
+    font-family: 'Bubblegum Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  a{
+    color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background 0.9s;
   }
