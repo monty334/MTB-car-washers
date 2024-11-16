@@ -142,6 +142,8 @@ function updateCarousel() {
 document.querySelector('.prev').addEventListener('click', showPrevSlide);
 document.querySelector('.next').addEventListener('click', showNextSlide);
 
+// Auto-slide functionality
+setInterval(showNextSlide, 64000); // Auto-slide every 6 seconds
 </script>
 
 
