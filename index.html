@@ -74,7 +74,6 @@
     width: calc(300 * 3); /* Total width = width of container * number of images */
     transition: transform 1.5s ease-in-out; /* Smooth transition for sliding */
     gap: 40px;
-    filter: grayscale(100%);
 }
 
 .carousel-slide img {
@@ -84,6 +83,12 @@
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.5);
     object-fit: cover;
     display: flex;
+    filter: grayscale(100%);
+}
+.carousel-slide img:hover{
+  filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
   .prev, .next {
